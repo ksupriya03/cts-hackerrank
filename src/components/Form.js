@@ -24,12 +24,13 @@ class Form extends Component {
   submitForm(event) {
     event.preventDefault();
 
-    this.props.isFormValid(
-      this.state.isEmailValid &&
-        this.state.isNameValid &&
-        this.state.isPhoneValid &&
-        this.state.isUrlValid
-    );
+    this.props.isFormValid &&
+      this.props.isFormValid(
+        this.state.isEmailValid &&
+          this.state.isNameValid &&
+          this.state.isPhoneValid &&
+          this.state.isUrlValid
+      );
   }
 
   handleChange(event) {
@@ -113,7 +114,7 @@ class Form extends Component {
 }
 
 Form.propTypes = {
-  isFormValid: PropTypes.func.isRequired,
+  isFormValid: PropTypes.func,
 };
 
 export default Form;
