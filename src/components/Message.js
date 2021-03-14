@@ -1,20 +1,11 @@
-import React from "react";
-import { PropTypes } from "prop-types";
+import React from 'react';
 
-import { INVALID_MESSAGE, VALID_MESSAGE } from "../utils/constants";
-
-const Message = ({ isValid }) => {
-  return (
-    <div>
-      <h3 className="text-center message">
-        {isValid ? VALID_MESSAGE : INVALID_MESSAGE}
-      </h3>
-    </div>
-  );
-};
-
-Message.propTypes = {
-  isValid: PropTypes.bool.isRequired,
-};
+const Message = () => {
+    return (
+        <div>
+            <h3 className="text-center message"></h3>
+        </div>
+    )
+}
 
 export default Message;
