@@ -36,7 +36,7 @@ class Form extends Component {
   handleChange(event) {
     const value = event.target.value;
 
-    switch (event.target.name) {
+    switch (event.currentTarget.name) {
       case "name":
         this.setState({ isNameValid: VALID_NAME.test(value) });
         break;
@@ -102,6 +102,7 @@ class Form extends Component {
           <div className="small-6 small-centered text-center columns">
             <button
               type="submit"
+              onClick={this.submitForm}
               className="button success expand round text-center"
             >
               Verify
