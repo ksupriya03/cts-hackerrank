@@ -13,6 +13,7 @@ class App extends Component {
   }
 
   validateAndSubmit(isFormValid) {
+    console.log("Called with :", isFormValid);
     this.setState({ isFormValid });
   }
 
